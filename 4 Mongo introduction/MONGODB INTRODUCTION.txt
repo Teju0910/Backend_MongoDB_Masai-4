@@ -1,0 +1,199 @@
+ADMIN@DESKTOP-BMBJJ1G MINGW64 ~
+$ db.users.find({})
+mongo
+bash: syntax error near unexpected token `{}'
+MongoDB shell version v5.0.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("0f61872d-d726-4d92-8abe-e781dfdf9eb9") }
+MongoDB server version: 5.0.6
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+users.find({})
+uncaught exception: ReferenceError: users is not defined :
+@(shell):1:1
+show dbs
+admin       0.000GB
+assignment  0.000GB
+config      0.000GB
+local       0.000GB
+test        0.000GB
+users.find({})
+uncaught exception: ReferenceError: users is not defined :
+@(shell):1:1
+db.users.find({})
+
+db.users.insert({"first_name" : "Teju" , "last_name" : "patil", "email" : "tv@gmail.com" , "ip_address" : "193.20.21", "age" : 26})
+WriteResult({ "nInserted" : 1 })
+db.users.insert({"first_name" : "Sanju", "last_name" : "mane" , "email" : "sv@gmail.com" , "ip_address" : "120.25.21", "age" : 20})
+WriteResult({ "nInserted" : 1 })
+{ "_id" : ObjectId("622618605e5079efb2fa85ff"), "first_name" : "Teju", "last_name" : "patil", "email" : "tv@gmail.com", "ip_address" : "193.20.21", "age" : 26 }
+{ "_id" : ObjectId("622619ea5e5079efb2fa8600"), "first_name" : "Sanju", "last_name" : "mane", "email" : "sv@gmail.com", "ip_address" : "120.25.21", "age" : 20 }
+db.users.insert({"first_name" : "Mona" , "last_name" : "patil", "email" : "mv@gmail.com" , "ip_address" : "193.20.22", "age" : 23})
+WriteResult({ "nInserted" : 1 })
+db.users.insertMany([{"first_name": "Sona" , "last_name" : "mane ", "email" : "sv@gmail.com" , "ip_address" : "193.20.23", "age" : 25},
+ {"first_name" : "Rinku", "last_name" : "kadam", "email" : "aa@gmail.com" , "ip_address" : "193.20.24", "age" : 21},
+ {"first_name" : "saja" , "last_name" : "jadav", "email" : "ss@gmail.com" , "ip_address" : "193.20.25", "age" : 61}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("62264b3d5a82af1f8cbc72ab"),
+                ObjectId("62264b3d5a82af1f8cbc72ac"),
+                ObjectId("62264b3d5a82af1f8cbc72ad")
+        ]
+}
+db.users.insertMany([{"first_name": "Sonaa" , "last_name" : "mane ", "email" : "sav@gmail.com" , "ip_address" : "193.20.26", "age" : 25},
+ {"first_name" : "Rinkuu", "last_name" : "kadam", "email" : "aaa@gmail.com" , "ip_address" : "193.20.27", "age" : 21},
+ {"first_name" : "sajaa" , "last_name" : "jadav", "email" : "sas@gmail.com" , "ip_address" : "193.20.28", "age" : 61}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("62264b7d5a82af1f8cbc72ae"),
+                ObjectId("62264b7d5a82af1f8cbc72af"),
+                ObjectId("62264b7d5a82af1f8cbc72b0")
+        ]
+}
+db.users.find({})
+{ "_id" : ObjectId("622618605e5079efb2fa85ff"), "first_name" : "Teju", "last_name" : "patil", "email" : "tv@gmail.com", "ip_address" : "193.20.21", "age" : 26 }
+{ "_id" : ObjectId("622619ea5e5079efb2fa8600"), "first_name" : "Sanju", "last_name" : "mane", "email" : "sv@gmail.com", "ip_address" : "120.25.21", "age" : 20 }
+{ "_id" : ObjectId("62264533ee564056fed1b9e8"), "first_name" : "Mona", "last_name" : "patil", "email" : "mv@gmail.com", "ip_address" : "193.20.22", "age" : 23 }
+{ "_id" : ObjectId("622645c4a38f3f0a3470c8c2"), "first_name" : "Sonaa", "last_name" : "mane ", "email" : "sav@gmail.com", "ip_address" : "193.20.26", "age" : 25 }
+{ "_id" : ObjectId("62264b3d5a82af1f8cbc72ab"), "first_name" : "Sona", "last_name" : "mane ", "email" : "sv@gmail.com", "ip_address" : "193.20.23", "age" : 25 }
+{ "_id" : ObjectId("62264b3d5a82af1f8cbc72ac"), "first_name" : "Rinkuu", "last_name" : "kadam", "email" : "aaa@gmail.com", "ip_address" : "193.20.27", "age" : 21 }
+{ "_id" : ObjectId("62264b3d5a82af1f8cbc72ad"), "first_name" : "saja", "last_name" : "jadav", "email" : "ss@gmail.com", "ip_address" : "193.20.25", "age" : 61 }
+{ "_id" : ObjectId("62264b7d5a82af1f8cbc72ae"), "first_name" : "Sona", "last_name" : "mane ", "email" : "sv@gmail.com", "ip_address" : "193.20.23", "age" : 25 }
+{ "_id" : ObjectId("62264b7d5a82af1f8cbc72af"), "first_name" : "Rinku", "last_name" : "kadam", "email" : "aa@gmail.com", "ip_address" : "193.20.24", "age" : 21 }
+{ "_id" : ObjectId("62264b7d5a82af1f8cbc72b0"), "first_name" : "sajaa", "last_name" : "jadav", "email" : "sas@gmail.com", "ip_address" : "193.20.28", "age" : 61 }
+
+$ mongo
+MongoDB shell version v5.0.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("8b5dc4ae-6bc4-44c3-816f-3debceb3fec6") }
+MongoDB server version: 5.0.6
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+db.users.find({}).pretty()
+{
+        "_id" : ObjectId("622618605e5079efb2fa85ff"),
+        "first_name" : "Teju",
+        "last_name" : "patil",
+        "email" : "tv@gmail.com",
+        "ip_address" : "193.20.21",
+        "age" : 26
+}
+{
+        "_id" : ObjectId("622619ea5e5079efb2fa8600"),
+        "first_name" : "Sanju",
+        "last_name" : "mane",
+        "email" : "sv@gmail.com",
+        "ip_address" : "120.25.21",
+        "age" : 20
+}
+{
+        "_id" : ObjectId("62264533ee564056fed1b9e8"),
+        "first_name" : "Mona",
+        "last_name" : "patil",
+        "email" : "tejupatil@gmail.com",
+        "ip_address" : "193.20.22",
+        "age" : 23
+}
+{
+        "_id" : ObjectId("622645c4a38f3f0a3470c8c2"),
+        "first_name" : "Sona",
+        "last_name" : "mane ",
+        "email" : "sv@gmail.com",
+        "ip_address" : "193.20.23",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("62264b3d5a82af1f8cbc72ac"),
+        "first_name" : "Rinku",
+        "last_name" : "kadam",
+        "email" : "aa@gmail.com",
+        "ip_address" : "193.20.24",
+        "age" : 21
+}
+{
+        "_id" : ObjectId("62264b3d5a82af1f8cbc72ad"),
+        "first_name" : "saja",
+        "last_name" : "jadav",
+        "email" : "ss@gmail.com",
+        "ip_address" : "193.20.25",
+        "age" : 61
+}
+{
+        "_id" : ObjectId("62264b7d5a82af1f8cbc72af"),
+        "first_name" : "Rinku",
+        "last_name" : "kadam",
+        "email" : "aa@gmail.com",
+        "ip_address" : "193.20.24",
+        "age" : 21
+}
+{
+        "_id" : ObjectId("62264db3e6c5f5b57dfabbec"),
+        "first_name" : "Sonaa",
+        "last_name" : "mane ",
+        "email" : "sav@gmail.com",
+        "ip_address" : "193.20.26",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("62264db3e6c5f5b57dfabbed"),
+        "first_name" : "Rinkuu",
+        "last_name" : "kadam",
+        "email" : "aaa@gmail.com",
+        "ip_address" : "193.20.27",
+        "age" : 21
+}
+{
+        "_id" : ObjectId("62264db3e6c5f5b57dfabbee"),
+        "first_name" : "sajaa",
+        "last_name" : "jadav",
+        "email" : "sas@gmail.com",
+        "ip_address" : "193.20.28",
+        "age" : 61
+}
+db.users.update({ "first_name" : "Teju"},{$set: {"last_name" : "kirdat"} })
+uncaught exception: SyntaxError: illegal character :
+@(shell):1:17
+db.users.update({ "first_name" : "Teju"},{$set: {"last_name" : "kirdat"} })
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+db.users.updateMany({ "age" : 21
+
+
+ADMIN@DESKTOP-BMBJJ1G MINGW64 ~
+$ mongo
+MongoDB shell version v5.0.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("4b42158f-ab30-4e0a-be60-8a912f8f5638") }
+MongoDB server version: 5.0.6
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+db.users.updateMany({"age":21},{$set:{"age":55}})
+{ "acknowledged" : true, "matchedCount" : 3, "modifiedCount" : 3 }
+
+db.users.remove({ "first_name" : "Teju"})
+WriteResult({ "nRemoved" : 1 })
+db.users.remove({ "first_name"})
+uncaught exception: SyntaxError: missing : after property id :
+@(shell):1:30
+db.dropDatabase()
+{ "ok" : 1 }
+
+
+
+
