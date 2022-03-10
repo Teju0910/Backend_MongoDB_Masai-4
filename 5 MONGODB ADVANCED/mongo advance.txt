@@ -1,0 +1,600 @@
+
+ADMIN@DESKTOP-BMBJJ1G MINGW64 ~
+$ mongo
+MongoDB shell version v5.0.6
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("1e25dd70-204f-49e6-876f-77ac9b0401eb") }
+MongoDB server version: 5.0.6
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+show dbs
+admin       0.000GB
+assignment  0.000GB
+config      0.000GB
+local       0.000GB
+use assignment
+switched to db assignment
+db.movies.count()
+500
+db.movies.find({})
+{ "_id" : ObjectId("6228d265e48aab97e460cdcc"), "id" : 1, "movie_name" : "Man in the Saddle", "movie_genre" : "Western", "production_year" : 1995, "budget" : "9274" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdcd"), "id" : 2, "movie_name" : "What's Your Number?", "movie_genre" : "Comedy|Romance", "production_year" : 2002, "budget" : "1" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdce"), "id" : 3, "movie_name" : "Saints and Soldiers: Airborne Creed", "movie_genre" : "Action|Drama|War", "production_year" : 2012, "budget" : "8848" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdcf"), "id" : 4, "movie_name" : "Sweet Charity", "movie_genre" : "Comedy|Drama|Musical|Romance", "production_year" : 1994, "budget" : "8" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd0"), "id" : 5, "movie_name" : "Wildest Dream, The", "movie_genre" : "Documentary", "production_year" : 1994, "budget" : "21" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd1"), "id" : 6, "movie_name" : "Backlight", "movie_genre" : "Drama|Sci-Fi|Thriller", "production_year" : 2012, "budget" : "7106" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd2"), "id" : 7, "movie_name" : "Virtuality", "movie_genre" : "Drama|Sci-Fi|Thriller", "production_year" : 1998, "budget" : "13" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd3"), "id" : 8, "movie_name" : "Pekka ja Pätkä lumimiehen jäljillä", "movie_genre" : "Comedy", "production_year" : 2008, "budget" : "3" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd4"), "id" : 9, "movie_name" : "Happily N'Ever After", "movie_genre" : "Animation|Children|Comedy", "production_year" : 1996, "budget" : "45053" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd5"), "id" : 10, "movie_name" : "Rosa Luxemburg", "movie_genre" : "Drama", "production_year" : 2002, "budget" : "732" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd6"), "id" : 11, "movie_name" : "Spellbound", "movie_genre" : "Mystery|Romance|Thriller", "production_year" : 1988, "budget" : "047" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd7"), "id" : 12, "movie_name" : "Backfire", "movie_genre" : "Crime|Film-Noir|Mystery|Romance|Thriller", "production_year" : 2012, "budget" : "494" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd8"), "id" : 13, "movie_name" : "Houdini", "movie_genre" : "Drama", "production_year" : 2010, "budget" : "02557" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd9"), "id" : 14, "movie_name" : "Rare Birds", "movie_genre" : "Comedy|Drama", "production_year" : 2000, "budget" : "4940" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdda"), "id" : 15, "movie_name" : "Heir to an Execution", "movie_genre" : "Documentary", "production_year" : 1986, "budget" : "150" }
+{ "_id" : ObjectId("6228d265e48aab97e460cddb"), "id" : 16, "movie_name" : "Withnail & I", "movie_genre" : "Comedy", "production_year" : 2007, "budget" : "10456" }
+{ "_id" : ObjectId("6228d265e48aab97e460cddc"), "id" : 17, "movie_name" : "Company Business", "movie_genre" : "Action|Comedy", "production_year" : 2003, "budget" : "83319" }
+{ "_id" : ObjectId("6228d265e48aab97e460cddd"), "id" : 18, "movie_name" : "Legacy of Rage", "movie_genre" : "Action", "production_year" : 2008, "budget" : "311" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdde"), "id" : 19, "movie_name" : "Leap Year (Año bisiesto)", "movie_genre" : "Drama", "production_year" : 2003, "budget" : "874" }
+{ "_id" : ObjectId("6228d265e48aab97e460cddf"), "id" : 20, "movie_name" : "Star 80", "movie_genre" : "Drama", "production_year" : 2011, "budget" : "975" }
+Type "it" for more
+db.movies.find({}).pretty()
+{
+        "_id" : ObjectId("6228d265e48aab97e460cdcc"),
+        "id" : 1,
+        "movie_name" : "Man in the Saddle",
+        "movie_genre" : "Western",
+        "production_year" : 1995,
+        "budget" : "9274"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cdcd"),
+        "id" : 2,
+        "movie_name" : "What's Your Number?",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2002,
+        "budget" : "1"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cdce"),
+        "id" : 3,
+        "movie_name" : "Saints and Soldiers: Airborne Creed",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 2012,
+        "budget" : "8848"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cdcf"),
+        "id" : 4,
+        "movie_name" : "Sweet Charity",
+        "movie_genre" : "Comedy|Drama|Musical|Romance",
+        "production_year" : 1994,
+        "budget" : "8"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cdd0"),
+        "id" : 5,
+        "movie_name" : "Wildest Dream, The",
+        "movie_genre" : "Documentary",
+        "production_year" : 1994,
+        "budget" : "21"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cdd1"),
+        "id" : 6,
+        "movie_name" : "Backlight",
+        "movie_genre" : "Drama|Sci-Fi|Thriller",
+        "production_year" : 2012,
+        "budget" : "7106"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cdd2"),
+        "id" : 7,
+        "movie_name" : "Virtuality",
+        "movie_genre" : "Drama|Sci-Fi|Thriller",
+        "production_year" : 1998,
+        "budget" : "13"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cdd3"),
+        "id" : 8,
+        "movie_name" : "Pekka ja Pätkä lumimiehen jäljillä",
+        "movie_genre" : "Comedy",
+        "production_year" : 2008,
+        "budget" : "3"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cdd4"),
+        "id" : 9,
+        "movie_name" : "Happily N'Ever After",
+        "movie_genre" : "Animation|Children|Comedy",
+        "production_year" : 1996,
+        "budget" : "45053"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cdd5"),
+        "id" : 10,
+        "movie_name" : "Rosa Luxemburg",
+        "movie_genre" : "Drama",
+        "production_year" : 2002,
+        "budget" : "732"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cdd6"),
+        "id" : 11,
+        "movie_name" : "Spellbound",
+        "movie_genre" : "Mystery|Romance|Thriller",
+        "production_year" : 1988,
+        "budget" : "047"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cdd7"),
+        "id" : 12,
+        "movie_name" : "Backfire",
+        "movie_genre" : "Crime|Film-Noir|Mystery|Romance|Thriller",
+        "production_year" : 2012,
+        "budget" : "494"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cdd8"),
+        "id" : 13,
+        "movie_name" : "Houdini",
+        "movie_genre" : "Drama",
+        "production_year" : 2010,
+        "budget" : "02557"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cdd9"),
+        "id" : 14,
+        "movie_name" : "Rare Birds",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2000,
+        "budget" : "4940"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cdda"),
+        "id" : 15,
+        "movie_name" : "Heir to an Execution",
+        "movie_genre" : "Documentary",
+        "production_year" : 1986,
+        "budget" : "150"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cddb"),
+        "id" : 16,
+        "movie_name" : "Withnail & I",
+        "movie_genre" : "Comedy",
+        "production_year" : 2007,
+        "budget" : "10456"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cddc"),
+        "id" : 17,
+        "movie_name" : "Company Business",
+        "movie_genre" : "Action|Comedy",
+        "production_year" : 2003,
+        "budget" : "83319"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cddd"),
+        "id" : 18,
+        "movie_name" : "Legacy of Rage",
+        "movie_genre" : "Action",
+        "production_year" : 2008,
+        "budget" : "311"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cdde"),
+        "id" : 19,
+        "movie_name" : "Leap Year (Año bisiesto)",
+        "movie_genre" : "Drama",
+        "production_year" : 2003,
+        "budget" : "874"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cddf"),
+        "id" : 20,
+        "movie_name" : "Star 80",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : "975"
+}
+Type "it" for more
+db.movies.find({"movie_name" : "Star 80"}).pretty()
+uncaught exception: SyntaxError: illegal character :
+@(shell):1:18
+db.movies.find({"movie_name" : "Star 80"}).pretty()
+{
+        "_id" : ObjectId("6228d265e48aab97e460cddf"),
+        "id" : 20,
+        "movie_name" : "Star 80",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : "975"
+}
+db.movies.find({"movie_name" : "Star 80"}).pretty()
+{
+        "_id" : ObjectId("6228d265e48aab97e460cddf"),
+        "id" : 20,
+        "movie_name" : "Star 80",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : "975"
+}
+db.movies.find({"movie_name" : "Star 80"}).pretty()
+{
+        "_id" : ObjectId("6228d265e48aab97e460cddf"),
+        "id" : 20,
+        "movie_name" : "Star 80",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : "975"
+}
+db.movies.find({ "movie_name" : {$not: "Star 80" } })
+Error: error: {
+        "ok" : 0,
+        "errmsg" : "$not needs a regex or a document",
+        "code" : 2,
+        "codeName" : "BadValue"
+}
+db.movies.find({ "movie_name" : {$eq :  "Legacy of Rage" } });
+db.movies.find({"movie_name" :{$eq:""Legacy of Rage"}})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:41
+db.movies.find({"movie_name" :{$eq: "Legacy of Rage"}})
+uncaught exception: SyntaxError: missing } after property list :
+@(shell):1:37
+db.movies.find({"movie_name" :{$eq: "Legacy of Rage"}})
+{ "_id" : ObjectId("6228d265e48aab97e460cddd"), "id" : 18, "movie_name" : "Legacy of Rage", "movie_genre" : "Action", "production_year" : 2008, "budget" : "311" }
+db.movies.find({"movie_name" :{$eq: "Legacy of Rage"}}).pretty()
+{
+        "_id" : ObjectId("6228d265e48aab97e460cddd"),
+        "id" : 18,
+        "movie_name" : "Legacy of Rage",
+        "movie_genre" : "Action",
+        "production_year" : 2008,
+        "budget" : "311"
+}
+db.movies.find({"movie_name" : {$ne:"Star 80"}})
+{ "_id" : ObjectId("6228d265e48aab97e460cdcc"), "id" : 1, "movie_name" : "Man in the Saddle", "movie_genre" : "Western", "production_year" : 1995, "budget" : "9274" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdcd"), "id" : 2, "movie_name" : "What's Your Number?", "movie_genre" : "Comedy|Romance", "production_year" : 2002, "budget" : "1" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdce"), "id" : 3, "movie_name" : "Saints and Soldiers: Airborne Creed", "movie_genre" : "Action|Drama|War", "production_year" : 2012, "budget" : "8848" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdcf"), "id" : 4, "movie_name" : "Sweet Charity", "movie_genre" : "Comedy|Drama|Musical|Romance", "production_year" : 1994, "budget" : "8" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd0"), "id" : 5, "movie_name" : "Wildest Dream, The", "movie_genre" : "Documentary", "production_year" : 1994, "budget" : "21" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd1"), "id" : 6, "movie_name" : "Backlight", "movie_genre" : "Drama|Sci-Fi|Thriller", "production_year" : 2012, "budget" : "7106" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd2"), "id" : 7, "movie_name" : "Virtuality", "movie_genre" : "Drama|Sci-Fi|Thriller", "production_year" : 1998, "budget" : "13" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd3"), "id" : 8, "movie_name" : "Pekka ja Pätkä lumimiehen jäljillä", "movie_genre" : "Comedy", "production_year" : 2008, "budget" : "3" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd4"), "id" : 9, "movie_name" : "Happily N'Ever After", "movie_genre" : "Animation|Children|Comedy", "production_year" : 1996, "budget" : "45053" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd5"), "id" : 10, "movie_name" : "Rosa Luxemburg", "movie_genre" : "Drama", "production_year" : 2002, "budget" : "732" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd6"), "id" : 11, "movie_name" : "Spellbound", "movie_genre" : "Mystery|Romance|Thriller", "production_year" : 1988, "budget" : "047" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd7"), "id" : 12, "movie_name" : "Backfire", "movie_genre" : "Crime|Film-Noir|Mystery|Romance|Thriller", "production_year" : 2012, "budget" : "494" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd8"), "id" : 13, "movie_name" : "Houdini", "movie_genre" : "Drama", "production_year" : 2010, "budget" : "02557" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd9"), "id" : 14, "movie_name" : "Rare Birds", "movie_genre" : "Comedy|Drama", "production_year" : 2000, "budget" : "4940" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdda"), "id" : 15, "movie_name" : "Heir to an Execution", "movie_genre" : "Documentary", "production_year" : 1986, "budget" : "150" }
+{ "_id" : ObjectId("6228d265e48aab97e460cddb"), "id" : 16, "movie_name" : "Withnail & I", "movie_genre" : "Comedy", "production_year" : 2007, "budget" : "10456" }
+{ "_id" : ObjectId("6228d265e48aab97e460cddc"), "id" : 17, "movie_name" : "Company Business", "movie_genre" : "Action|Comedy", "production_year" : 2003, "budget" : "83319" }
+{ "_id" : ObjectId("6228d265e48aab97e460cddd"), "id" : 18, "movie_name" : "Legacy of Rage", "movie_genre" : "Action", "production_year" : 2008, "budget" : "311" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdde"), "id" : 19, "movie_name" : "Leap Year (Año bisiesto)", "movie_genre" : "Drama", "production_year" : 2003, "budget" : "874" }
+{ "_id" : ObjectId("6228d265e48aab97e460cde0"), "id" : 21, "movie_name" : "Strange Behavior", "movie_genre" : "Horror|Mystery|Thriller", "production_year" : 2007, "budget" : "3" }
+Type "it" for more
+db.movies.find({ production_year : {$gte :1999}})
+{ "_id" : ObjectId("6228d265e48aab97e460cdcd"), "id" : 2, "movie_name" : "What's Your Number?", "movie_genre" : "Comedy|Romance", "production_year" : 2002, "budget" : "1" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdce"), "id" : 3, "movie_name" : "Saints and Soldiers: Airborne Creed", "movie_genre" : "Action|Drama|War", "production_year" : 2012, "budget" : "8848" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd1"), "id" : 6, "movie_name" : "Backlight", "movie_genre" : "Drama|Sci-Fi|Thriller", "production_year" : 2012, "budget" : "7106" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd3"), "id" : 8, "movie_name" : "Pekka ja Pätkä lumimiehen jäljillä", "movie_genre" : "Comedy", "production_year" : 2008, "budget" : "3" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd5"), "id" : 10, "movie_name" : "Rosa Luxemburg", "movie_genre" : "Drama", "production_year" : 2002, "budget" : "732" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd7"), "id" : 12, "movie_name" : "Backfire", "movie_genre" : "Crime|Film-Noir|Mystery|Romance|Thriller", "production_year" : 2012, "budget" : "494" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd8"), "id" : 13, "movie_name" : "Houdini", "movie_genre" : "Drama", "production_year" : 2010, "budget" : "02557" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd9"), "id" : 14, "movie_name" : "Rare Birds", "movie_genre" : "Comedy|Drama", "production_year" : 2000, "budget" : "4940" }
+{ "_id" : ObjectId("6228d265e48aab97e460cddb"), "id" : 16, "movie_name" : "Withnail & I", "movie_genre" : "Comedy", "production_year" : 2007, "budget" : "10456" }
+{ "_id" : ObjectId("6228d265e48aab97e460cddc"), "id" : 17, "movie_name" : "Company Business", "movie_genre" : "Action|Comedy", "production_year" : 2003, "budget" : "83319" }
+{ "_id" : ObjectId("6228d265e48aab97e460cddd"), "id" : 18, "movie_name" : "Legacy of Rage", "movie_genre" : "Action", "production_year" : 2008, "budget" : "311" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdde"), "id" : 19, "movie_name" : "Leap Year (Año bisiesto)", "movie_genre" : "Drama", "production_year" : 2003, "budget" : "874" }
+{ "_id" : ObjectId("6228d265e48aab97e460cddf"), "id" : 20, "movie_name" : "Star 80", "movie_genre" : "Drama", "production_year" : 2011, "budget" : "975" }
+{ "_id" : ObjectId("6228d265e48aab97e460cde0"), "id" : 21, "movie_name" : "Strange Behavior", "movie_genre" : "Horror|Mystery|Thriller", "production_year" : 2007, "budget" : "3" }
+{ "_id" : ObjectId("6228d265e48aab97e460cde1"), "id" : 22, "movie_name" : "Executive Action", "movie_genre" : "Crime|Drama", "production_year" : 2012, "budget" : "0506" }
+{ "_id" : ObjectId("6228d265e48aab97e460cde4"), "id" : 25, "movie_name" : "Winslow Boy, The", "movie_genre" : "Drama", "production_year" : 2006, "budget" : "2" }
+{ "_id" : ObjectId("6228d265e48aab97e460cde5"), "id" : 26, "movie_name" : "Cop Out", "movie_genre" : "Action|Comedy|Crime", "production_year" : 2007, "budget" : "51" }
+{ "_id" : ObjectId("6228d265e48aab97e460cde6"), "id" : 27, "movie_name" : "8 Million Ways to Die", "movie_genre" : "Action|Adventure|Crime|Thriller", "production_year" : 2009, "budget" : "71" }
+{ "_id" : ObjectId("6228d265e48aab97e460cde7"), "id" : 28, "movie_name" : "Ruins", "movie_genre" : "Documentary", "production_year" : 2002, "budget" : "0125" }
+{ "_id" : ObjectId("6228d265e48aab97e460cde9"), "id" : 30, "movie_name" : "Horror Hotel (a.k.a. City of the Dead, The)", "movie_genre" : "Horror|Thriller", "production_year" : 2000, "budget" : "61" }
+Type "it" for more
+switched to db assignment
+db.movies.find({ production_year : {$lte :1999}})
+{ "_id" : ObjectId("6228d265e48aab97e460cdcc"), "id" : 1, "movie_name" : "Man in the Saddle", "movie_genre" : "Western", "production_year" : 1995, "budget" : "9274" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdcf"), "id" : 4, "movie_name" : "Sweet Charity", "movie_genre" : "Comedy|Drama|Musical|Romance", "production_year" : 1994, "budget" : "8" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd0"), "id" : 5, "movie_name" : "Wildest Dream, The", "movie_genre" : "Documentary", "production_year" : 1994, "budget" : "21" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd2"), "id" : 7, "movie_name" : "Virtuality", "movie_genre" : "Drama|Sci-Fi|Thriller", "production_year" : 1998, "budget" : "13" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd4"), "id" : 9, "movie_name" : "Happily N'Ever After", "movie_genre" : "Animation|Children|Comedy", "production_year" : 1996, "budget" : "45053" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd6"), "id" : 11, "movie_name" : "Spellbound", "movie_genre" : "Mystery|Romance|Thriller", "production_year" : 1988, "budget" : "047" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdda"), "id" : 15, "movie_name" : "Heir to an Execution", "movie_genre" : "Documentary", "production_year" : 1986, "budget" : "150" }
+{ "_id" : ObjectId("6228d265e48aab97e460cde2"), "id" : 23, "movie_name" : "Centenarian Who Climbed Out the Window and Vanished, The (Hundraåringen som klev ut genom fönstret och försvann)", "movie_genre" : "Adventure|Comedy|Drama", "production_year" : 1997, "budget" : "12" }
+{ "_id" : ObjectId("6228d265e48aab97e460cde3"), "id" : 24, "movie_name" : "This Could Be The Night", "movie_genre" : "Comedy", "production_year" : 1997, "budget" : "29210" }
+{ "_id" : ObjectId("6228d265e48aab97e460cde8"), "id" : 29, "movie_name" : "Killers, The", "movie_genre" : "Crime|Film-Noir", "production_year" : 1996, "budget" : "6236" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdea"), "id" : 31, "movie_name" : "Love in Another Language (Baska Dilde Ask)", "movie_genre" : "Drama|Romance", "production_year" : 1977, "budget" : "9948" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdee"), "id" : 35, "movie_name" : "Kids Return (Kizzu ritân)", "movie_genre" : "Drama", "production_year" : 1994, "budget" : "62" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdf2"), "id" : 39, "movie_name" : "Sudden Impact", "movie_genre" : "Crime|Thriller", "production_year" : 1991, "budget" : "8366" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdf3"), "id" : 40, "movie_name" : "Last Laugh, The (Letzte Mann, Der)", "movie_genre" : "Drama", "production_year" : 1996, "budget" : "96" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdf5"), "id" : 42, "movie_name" : "Bourne Legacy, The", "movie_genre" : "Action|Adventure|Drama|Thriller|IMAX", "production_year" : 1994, "budget" : "75" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdf8"), "id" : 45, "movie_name" : "Shame (Skammen)", "movie_genre" : "Drama|War", "production_year" : 1995, "budget" : "164" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdf9"), "id" : 46, "movie_name" : "Mr. Woodcock", "movie_genre" : "Comedy", "production_year" : 1985, "budget" : "42" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdfa"), "id" : 47, "movie_name" : "Dream Lover", "movie_genre" : "Drama|Mystery", "production_year" : 1997, "budget" : "97306" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdfd"), "id" : 50, "movie_name" : "Akira", "movie_genre" : "Action|Adventure|Animation|Sci-Fi", "production_year" : 1993, "budget" : "862" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce01"), "id" : 54, "movie_name" : "No Blade of Grass", "movie_genre" : "Drama|Sci-Fi", "production_year" : 1996, "budget" : "336" }
+Type "it" for more
+db.movies.find({$and: [{"production_year" : {$gt:1980}},{"movie_genre":{$eq : "Comedy"}} ]})
+{ "_id" : ObjectId("6228d265e48aab97e460cdd3"), "id" : 8, "movie_name" : "Pekka ja Pätkä lumimiehen jäljillä", "movie_genre" : "Comedy", "production_year" : 2008, "budget" : "3" }
+{ "_id" : ObjectId("6228d265e48aab97e460cddb"), "id" : 16, "movie_name" : "Withnail & I", "movie_genre" : "Comedy", "production_year" : 2007, "budget" : "10456" }
+{ "_id" : ObjectId("6228d265e48aab97e460cde3"), "id" : 24, "movie_name" : "This Could Be The Night", "movie_genre" : "Comedy", "production_year" : 1997, "budget" : "29210" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdf0"), "id" : 37, "movie_name" : "Puff, Puff, Pass", "movie_genre" : "Comedy", "production_year" : 2012, "budget" : "02359" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdf9"), "id" : 46, "movie_name" : "Mr. Woodcock", "movie_genre" : "Comedy", "production_year" : 1985, "budget" : "42" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdfc"), "id" : 49, "movie_name" : "Modesty Blaise", "movie_genre" : "Comedy", "production_year" : 2012, "budget" : "581" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce02"), "id" : 55, "movie_name" : "B*A*P*S", "movie_genre" : "Comedy", "production_year" : 1998, "budget" : "0" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce09"), "id" : 62, "movie_name" : "Getting Away With Murder", "movie_genre" : "Comedy", "production_year" : 2006, "budget" : "935" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce0f"), "id" : 68, "movie_name" : "Take Care of Your Scarf, Tatiana (Pidä huivista kiinni, Tatjana)", "movie_genre" : "Comedy", "production_year" : 1987, "budget" : "1" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce1a"), "id" : 79, "movie_name" : "I Hope They Serve Beer in Hell", "movie_genre" : "Comedy", "production_year" : 2010, "budget" : "7592" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce25"), "id" : 90, "movie_name" : "Take Her, She's Mine", "movie_genre" : "Comedy", "production_year" : 1994, "budget" : "11" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce2b"), "id" : 96, "movie_name" : "Waydowntown", "movie_genre" : "Comedy", "production_year" : 1990, "budget" : "2" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce51"), "id" : 134, "movie_name" : "Gods Must Be Crazy II, The", "movie_genre" : "Comedy", "production_year" : 1984, "budget" : "06" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce81"), "id" : 182, "movie_name" : "My Friends (Amici miei)", "movie_genre" : "Comedy", "production_year" : 1999, "budget" : "5" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce83"), "id" : 184, "movie_name" : "Last Holiday", "movie_genre" : "Comedy", "production_year" : 2001, "budget" : "00" }
+{ "_id" : ObjectId("6228d265e48aab97e460cea5"), "id" : 218, "movie_name" : "C'mon Man", "movie_genre" : "Comedy", "production_year" : 2009, "budget" : "90" }
+{ "_id" : ObjectId("6228d265e48aab97e460cea9"), "id" : 222, "movie_name" : "Boys' Night Out", "movie_genre" : "Comedy", "production_year" : 2011, "budget" : "3" }
+{ "_id" : ObjectId("6228d265e48aab97e460ceb0"), "id" : 229, "movie_name" : "Scary Movie 2", "movie_genre" : "Comedy", "production_year" : 2010, "budget" : "747" }
+{ "_id" : ObjectId("6228d265e48aab97e460cec0"), "id" : 245, "movie_name" : "Open Season", "movie_genre" : "Comedy", "production_year" : 1994, "budget" : "49" }
+{ "_id" : ObjectId("6228d265e48aab97e460cecb"), "id" : 256, "movie_name" : "Barefoot in the Park", "movie_genre" : "Comedy", "production_year" : 2004, "budget" : "42970" }
+Type "it" for more
+db.movies.find({$or : [{"production_year" : {$gt:1980}},{"movie_genre":{$eq : "Comedy"}} ]})
+{ "_id" : ObjectId("6228d265e48aab97e460cdcc"), "id" : 1, "movie_name" : "Man in the Saddle", "movie_genre" : "Western", "production_year" : 1995, "budget" : "9274" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdcd"), "id" : 2, "movie_name" : "What's Your Number?", "movie_genre" : "Comedy|Romance", "production_year" : 2002, "budget" : "1" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdce"), "id" : 3, "movie_name" : "Saints and Soldiers: Airborne Creed", "movie_genre" : "Action|Drama|War", "production_year" : 2012, "budget" : "8848" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdcf"), "id" : 4, "movie_name" : "Sweet Charity", "movie_genre" : "Comedy|Drama|Musical|Romance", "production_year" : 1994, "budget" : "8" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd0"), "id" : 5, "movie_name" : "Wildest Dream, The", "movie_genre" : "Documentary", "production_year" : 1994, "budget" : "21" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd1"), "id" : 6, "movie_name" : "Backlight", "movie_genre" : "Drama|Sci-Fi|Thriller", "production_year" : 2012, "budget" : "7106" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd2"), "id" : 7, "movie_name" : "Virtuality", "movie_genre" : "Drama|Sci-Fi|Thriller", "production_year" : 1998, "budget" : "13" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd3"), "id" : 8, "movie_name" : "Pekka ja Pätkä lumimiehen jäljillä", "movie_genre" : "Comedy", "production_year" : 2008, "budget" : "3" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd4"), "id" : 9, "movie_name" : "Happily N'Ever After", "movie_genre" : "Animation|Children|Comedy", "production_year" : 1996, "budget" : "45053" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd5"), "id" : 10, "movie_name" : "Rosa Luxemburg", "movie_genre" : "Drama", "production_year" : 2002, "budget" : "732" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd6"), "id" : 11, "movie_name" : "Spellbound", "movie_genre" : "Mystery|Romance|Thriller", "production_year" : 1988, "budget" : "047" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd7"), "id" : 12, "movie_name" : "Backfire", "movie_genre" : "Crime|Film-Noir|Mystery|Romance|Thriller", "production_year" : 2012, "budget" : "494" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd8"), "id" : 13, "movie_name" : "Houdini", "movie_genre" : "Drama", "production_year" : 2010, "budget" : "02557" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd9"), "id" : 14, "movie_name" : "Rare Birds", "movie_genre" : "Comedy|Drama", "production_year" : 2000, "budget" : "4940" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdda"), "id" : 15, "movie_name" : "Heir to an Execution", "movie_genre" : "Documentary", "production_year" : 1986, "budget" : "150" }
+{ "_id" : ObjectId("6228d265e48aab97e460cddb"), "id" : 16, "movie_name" : "Withnail & I", "movie_genre" : "Comedy", "production_year" : 2007, "budget" : "10456" }
+{ "_id" : ObjectId("6228d265e48aab97e460cddc"), "id" : 17, "movie_name" : "Company Business", "movie_genre" : "Action|Comedy", "production_year" : 2003, "budget" : "83319" }
+{ "_id" : ObjectId("6228d265e48aab97e460cddd"), "id" : 18, "movie_name" : "Legacy of Rage", "movie_genre" : "Action", "production_year" : 2008, "budget" : "311" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdde"), "id" : 19, "movie_name" : "Leap Year (Año bisiesto)", "movie_genre" : "Drama", "production_year" : 2003, "budget" : "874" }
+{ "_id" : ObjectId("6228d265e48aab97e460cddf"), "id" : 20, "movie_name" : "Star 80", "movie_genre" : "Drama", "production_year" : 2011, "budget" : "975" }
+Type "it" for more
+
+db.movies.find({$nor: [{"production_year" : {$gt:1980}},{"movie_genre":{$eq : "Comedy"}} ]})
+{ "_id" : ObjectId("6228d265e48aab97e460cdea"), "id" : 31, "movie_name" : "Love in Another Language (Baska Dilde Ask)", "movie_genre" : "Drama|Romance", "production_year" : 1977, "budget" : "9948" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce3e"), "id" : 115, "movie_name" : "Attila (Attila Flagello di Dio)", "movie_genre" : "Action", "production_year" : 1965, "budget" : "7488" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce5d"), "id" : 146, "movie_name" : "Officer's Ward (chambre des officiers, La)", "movie_genre" : "Drama|Romance|War", "production_year" : 1980, "budget" : "59" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce6a"), "id" : 159, "movie_name" : "Storm of the Century", "movie_genre" : "Horror|Thriller", "production_year" : 1980, "budget" : "36866" }
+{ "_id" : ObjectId("6228d265e48aab97e460cea8"), "id" : 221, "movie_name" : "Moth Diaries, The", "movie_genre" : "Thriller", "production_year" : 1970, "budget" : "99" }
+{ "_id" : ObjectId("6228d265e48aab97e460cebe"), "id" : 243, "movie_name" : "Beyond The Hills", "movie_genre" : "Drama", "production_year" : 1965, "budget" : "576" }
+{ "_id" : ObjectId("6228d265e48aab97e460cecd"), "id" : 258, "movie_name" : "Convoy", "movie_genre" : "Action|Comedy|Drama", "production_year" : 1970, "budget" : "497" }
+{ "_id" : ObjectId("6228d265e48aab97e460cedc"), "id" : 273, "movie_name" : "Home Alone 4", "movie_genre" : "Children|Comedy|Crime", "production_year" : 1966, "budget" : "82057" }
+{ "_id" : ObjectId("6228d265e48aab97e460cf32"), "id" : 359, "movie_name" : "Pete Seeger: The Power of Song", "movie_genre" : "Documentary", "production_year" : 1965, "budget" : "242" }
+{ "_id" : ObjectId("6228d265e48aab97e460cf7a"), "id" : 431, "movie_name" : "Merry Widow, The", "movie_genre" : "Drama|Romance", "production_year" : 1976, "budget" : "3312" }
+{ "_id" : ObjectId("6228d265e48aab97e460cf8d"), "id" : 450, "movie_name" : "Reckoning, The", "movie_genre" : "Crime|Mystery|Thriller", "production_year" : 1959, "budget" : "034" }
+{ "_id" : ObjectId("6228d265e48aab97e460cfa2"), "id" : 471, "movie_name" : "Breaking the Rules", "movie_genre" : "Comedy|Drama", "production_year" : 1978, "budget" : "13" }
+db.movies.find({ "production_year" :{$not:{$gt:1995}}})
+{ "_id" : ObjectId("6228d265e48aab97e460cdcc"), "id" : 1, "movie_name" : "Man in the Saddle", "movie_genre" : "Western", "production_year" : 1995, "budget" : "9274" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdcf"), "id" : 4, "movie_name" : "Sweet Charity", "movie_genre" : "Comedy|Drama|Musical|Romance", "production_year" : 1994, "budget" : "8" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd0"), "id" : 5, "movie_name" : "Wildest Dream, The", "movie_genre" : "Documentary", "production_year" : 1994, "budget" : "21" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd6"), "id" : 11, "movie_name" : "Spellbound", "movie_genre" : "Mystery|Romance|Thriller", "production_year" : 1988, "budget" : "047" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdda"), "id" : 15, "movie_name" : "Heir to an Execution", "movie_genre" : "Documentary", "production_year" : 1986, "budget" : "150" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdea"), "id" : 31, "movie_name" : "Love in Another Language (Baska Dilde Ask)", "movie_genre" : "Drama|Romance", "production_year" : 1977, "budget" : "9948" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdee"), "id" : 35, "movie_name" : "Kids Return (Kizzu ritân)", "movie_genre" : "Drama", "production_year" : 1994, "budget" : "62" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdf2"), "id" : 39, "movie_name" : "Sudden Impact", "movie_genre" : "Crime|Thriller", "production_year" : 1991, "budget" : "8366" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdf5"), "id" : 42, "movie_name" : "Bourne Legacy, The", "movie_genre" : "Action|Adventure|Drama|Thriller|IMAX", "production_year" : 1994, "budget" : "75" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdf8"), "id" : 45, "movie_name" : "Shame (Skammen)", "movie_genre" : "Drama|War", "production_year" : 1995, "budget" : "164" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdf9"), "id" : 46, "movie_name" : "Mr. Woodcock", "movie_genre" : "Comedy", "production_year" : 1985, "budget" : "42" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdfd"), "id" : 50, "movie_name" : "Akira", "movie_genre" : "Action|Adventure|Animation|Sci-Fi", "production_year" : 1993, "budget" : "862" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce0a"), "id" : 63, "movie_name" : "Vantage Point", "movie_genre" : "Action|Drama|Thriller", "production_year" : 1992, "budget" : "90833" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce0b"), "id" : 64, "movie_name" : "The Brass Legend", "movie_genre" : "Action", "production_year" : 1992, "budget" : "94" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce0f"), "id" : 68, "movie_name" : "Take Care of Your Scarf, Tatiana (Pidä huivista kiinni, Tatjana)", "movie_genre" : "Comedy", "production_year" : 1987, "budget" : "1" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce10"), "id" : 69, "movie_name" : "Autopsy (Macchie Solari)", "movie_genre" : "Horror", "production_year" : 1995, "budget" : "1" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce12"), "id" : 71, "movie_name" : "Trojan Eddie", "movie_genre" : "Crime|Drama|Romance", "production_year" : 1993, "budget" : "280" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce17"), "id" : 76, "movie_name" : "Story of Ruth, The", "movie_genre" : "Drama", "production_year" : 1990, "budget" : "1273" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce18"), "id" : 77, "movie_name" : "Lair of the White Worm, The", "movie_genre" : "Horror", "production_year" : 1990, "budget" : "47" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce19"), "id" : 78, "movie_name" : "Tyler Perry's A Madea Christmas", "movie_genre" : "Comedy|Drama", "production_year" : 1993, "budget" : "96414" }
+Type "it" for more
+db.movies.find({$and:  [{"production_year" : {$gt:1995}}, {"production_year" : {$lt:2000}} ]})
+{ "_id" : ObjectId("6228d265e48aab97e460cdd2"), "id" : 7, "movie_name" : "Virtuality", "movie_genre" : "Drama|Sci-Fi|Thriller", "production_year" : 1998, "budget" : "13" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdd4"), "id" : 9, "movie_name" : "Happily N'Ever After", "movie_genre" : "Animation|Children|Comedy", "production_year" : 1996, "budget" : "45053" }
+{ "_id" : ObjectId("6228d265e48aab97e460cde2"), "id" : 23, "movie_name" : "Centenarian Who Climbed Out the Window and Vanished, The (Hundraåringen som klev ut genom fönstret och försvann)", "movie_genre" : "Adventure|Comedy|Drama", "production_year" : 1997, "budget" : "12" }
+{ "_id" : ObjectId("6228d265e48aab97e460cde3"), "id" : 24, "movie_name" : "This Could Be The Night", "movie_genre" : "Comedy", "production_year" : 1997, "budget" : "29210" }
+{ "_id" : ObjectId("6228d265e48aab97e460cde8"), "id" : 29, "movie_name" : "Killers, The", "movie_genre" : "Crime|Film-Noir", "production_year" : 1996, "budget" : "6236" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdf3"), "id" : 40, "movie_name" : "Last Laugh, The (Letzte Mann, Der)", "movie_genre" : "Drama", "production_year" : 1996, "budget" : "96" }
+{ "_id" : ObjectId("6228d265e48aab97e460cdfa"), "id" : 47, "movie_name" : "Dream Lover", "movie_genre" : "Drama|Mystery", "production_year" : 1997, "budget" : "97306" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce01"), "id" : 54, "movie_name" : "No Blade of Grass", "movie_genre" : "Drama|Sci-Fi", "production_year" : 1996, "budget" : "336" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce02"), "id" : 55, "movie_name" : "B*A*P*S", "movie_genre" : "Comedy", "production_year" : 1998, "budget" : "0" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce04"), "id" : 57, "movie_name" : "Cannibal Holocaust", "movie_genre" : "Horror", "production_year" : 1997, "budget" : "8901" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce06"), "id" : 59, "movie_name" : "D2: The Mighty Ducks", "movie_genre" : "Children|Comedy", "production_year" : 1997, "budget" : "0938" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce0d"), "id" : 66, "movie_name" : "Holy Wars", "movie_genre" : "Documentary", "production_year" : 1999, "budget" : "95" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce13"), "id" : 72, "movie_name" : "Marked Woman", "movie_genre" : "Crime|Drama|Film-Noir", "production_year" : 1998, "budget" : "165" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce1e"), "id" : 83, "movie_name" : "Outside Man, The (Un homme est mort)", "movie_genre" : "Action|Crime|Drama|Thriller", "production_year" : 1997, "budget" : "01" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce20"), "id" : 85, "movie_name" : "Jungle Book", "movie_genre" : "Adventure|Fantasy", "production_year" : 1996, "budget" : "14901" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce26"), "id" : 91, "movie_name" : "Kosmos", "movie_genre" : "Drama", "production_year" : 1999, "budget" : "310" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce2a"), "id" : 95, "movie_name" : "End of Violence, The", "movie_genre" : "Drama|Thriller", "production_year" : 1997, "budget" : "13" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce31"), "id" : 102, "movie_name" : "California Solo", "movie_genre" : "Drama", "production_year" : 1996, "budget" : "83865" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce34"), "id" : 105, "movie_name" : "Glory Road", "movie_genre" : "Drama", "production_year" : 1999, "budget" : "507" }
+{ "_id" : ObjectId("6228d265e48aab97e460ce36"), "id" : 107, "movie_name" : "As You Like It", "movie_genre" : "Comedy|Drama|Romance", "production_year" : 1998, "budget" : "120" }
+Type "it" for more
+db.movies.find().sort( { "production_year" : -1, "movie_name" : 1 }).pretty()
+{
+        "_id" : ObjectId("6228d265e48aab97e460ce43"),
+        "id" : 120,
+        "movie_name" : "Blind Pig Who Wants to Fly (Babi buta yang ingin terbang)",
+        "movie_genre" : "Drama",
+        "production_year" : 2013,
+        "budget" : "29079"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cf5f"),
+        "id" : 404,
+        "movie_name" : "Fred & Vinnie",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2013,
+        "budget" : "28914"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cf8c"),
+        "id" : 449,
+        "movie_name" : "Meu Passado Me Condena: O Filme",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2013,
+        "budget" : "89"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cef1"),
+        "id" : 294,
+        "movie_name" : "Peas at 5:30 (Erbsen auf halb 6)",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2013,
+        "budget" : "2039"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cfb4"),
+        "id" : 489,
+        "movie_name" : "7th Dawn, The",
+        "movie_genre" : "Adventure|Drama|War",
+        "production_year" : 2012,
+        "budget" : "65"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460ce6c"),
+        "id" : 161,
+        "movie_name" : "A Year Along the Abandoned Road",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2012,
+        "budget" : "46"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460ce8d"),
+        "id" : 194,
+        "movie_name" : "All This, and Heaven Too",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2012,
+        "budget" : "4106"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cf88"),
+        "id" : 445,
+        "movie_name" : "Art of Travel, The",
+        "movie_genre" : "Adventure|Drama|Romance",
+        "production_year" : 2012,
+        "budget" : "7254"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cdd7"),
+        "id" : 12,
+        "movie_name" : "Backfire",
+        "movie_genre" : "Crime|Film-Noir|Mystery|Romance|Thriller",
+        "production_year" : 2012,
+        "budget" : "494"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cdd1"),
+        "id" : 6,
+        "movie_name" : "Backlight",
+        "movie_genre" : "Drama|Sci-Fi|Thriller",
+        "production_year" : 2012,
+        "budget" : "7106"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cf33"),
+        "id" : 360,
+        "movie_name" : "Cousins in Love (a.k.a. Tender Cousins) (Tendres Cousines)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2012,
+        "budget" : "04601"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cf82"),
+        "id" : 439,
+        "movie_name" : "Die, Monster, Die!",
+        "movie_genre" : "Horror|Mystery|Sci-Fi",
+        "production_year" : 2012,
+        "budget" : "81"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cde1"),
+        "id" : 22,
+        "movie_name" : "Executive Action",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2012,
+        "budget" : "0506"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460ceb4"),
+        "id" : 233,
+        "movie_name" : "It's All True",
+        "movie_genre" : "Documentary",
+        "production_year" : 2012,
+        "budget" : "291"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cf25"),
+        "id" : 346,
+        "movie_name" : "It's Not Me, I Swear! (C'est pas moi, je le jure!)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2012,
+        "budget" : "4502"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460ce2f"),
+        "id" : 100,
+        "movie_name" : "Joe and Max",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2012,
+        "budget" : "52"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460ce7d"),
+        "id" : 178,
+        "movie_name" : "Jolson Story, The",
+        "movie_genre" : "Musical",
+        "production_year" : 2012,
+        "budget" : "9"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460cee8"),
+        "id" : 285,
+        "movie_name" : "Last Emperor, The",
+        "movie_genre" : "Drama",
+        "production_year" : 2012,
+        "budget" : "07"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460ceb3"),
+        "id" : 232,
+        "movie_name" : "Leap Year (Año bisiesto)",
+        "movie_genre" : "Drama",
+        "production_year" : 2012,db.movies.find().sort( { "production_year" : -1, "movie_name" : 1 }).limit(5).skip(10)
+{ "_id" : ObjectId("6228d265e48aab97e460cf33"), "id" : 360, "movie_name" : "Cousins in Love (a.k.a. Tender Cousins) (Tendres Cousines)", "movie_genre" : "Drama|Romance", "production_year" : 2012, "budget" : "04601" }
+{ "_id" : ObjectId("6228d265e48aab97e460cf82"), "id" : 439, "movie_name" : "Die, Monster, Die!", "movie_genre" : "Horror|Mystery|Sci-Fi", "production_year" : 2012, "budget" : "81" }
+{ "_id" : ObjectId("6228d265e48aab97e460cde1"), "id" : 22, "movie_name" : "Executive Action", "movie_genre" : "Crime|Drama", "production_year" : 2012, "budget" : "0506" }
+{ "_id" : ObjectId("6228d265e48aab97e460ceb4"), "id" : 233, "movie_name" : "It's All True", "movie_genre" : "Documentary", "production_year" : 2012, "budget" : "291" }
+{ "_id" : ObjectId("6228d265e48aab97e460cf25"), "id" : 346, "movie_name" : "It's Not Me, I Swear! (C'est pas moi, je le jure!)", "movie_genre" : "Comedy|Drama", "production_year" : 2012, "budget" : "4502" }
+
+        "budget" : "009"
+}
+{
+        "_id" : ObjectId("6228d265e48aab97e460ce5a"),
+        "id" : 143,
+        "movie_name" : "Live and Let Die",
+        "movie_genre" : "Action|Adventure|Thriller",
+        "production_year" : 2012,
+        "budget" : "4"
+}
+Type "it" for more
+
