@@ -20,7 +20,7 @@ passport.use(new GoogleStrategy({
         user = await User.create({
             name : profile._json.given_name,        
             email : profile._json.email,
-            picture :  profile._json.picture,
+            // picture :  profile._json.picture,
             password : uuidv4(), 
             role : ["customer"]
         })
