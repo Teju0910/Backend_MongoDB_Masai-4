@@ -4,8 +4,9 @@ const userController = require("./controllers/user.controller")
 //  const postController = require("./controllers/post.controller")
  const productController = require("./controllers/product.controller")
 
-const {register,login} = require("./controllers/auth.controller")
+const {register,login,generateToken} = require("./controllers/auth.controller")
 const app = express();
+const passport = require("./configs/google-oauth")
 
 app.use(express.json());
 app.use("/user", userController)
@@ -13,6 +14,19 @@ app.use("/user", userController)
  app.post("/login", login)
 //  app.use("/post", postController)
 app.use("/product", productController)
+
+app.get('/auth/google',
+  passport.authenticate('google', { scope: ['profile', 'email'] }));
+ 
+app.get(
+'/auth/google/callback', 
+  passport.authenticate('google', { failureRedirect: '/login', session:false }),
+
+  function(req, res) {
+    const token = generateToken(req.user)
+    return res.status(200).send({user:req.user, token})
+  }
+)
 
 module.exports = app;
 
